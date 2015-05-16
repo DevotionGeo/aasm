@@ -1,10 +1,10 @@
 require 'active_record'
-require 'logger'
 require 'spec_helper'
-
+Dir[File.dirname(__FILE__) + "/../../models/active_record/*.rb"].sort.each { |f| require File.expand_path(f) }
 load_schema
 
 # if you want to see the statements while running the spec enable the following line
+# require 'logger'
 # ActiveRecord::Base.logger = Logger.new(STDERR)
 
 shared_examples_for "aasm model" do

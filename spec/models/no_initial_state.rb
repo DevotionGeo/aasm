@@ -1,4 +1,4 @@
-class Bar
+class NoInitialState
   include AASM
 
   aasm do
@@ -9,7 +9,4 @@ class Bar
       transitions :to => :ended, :from => [:read]
     end
   end
-end
-
-class Baz < Bar
 end
